@@ -40,7 +40,7 @@ export default function TodoInput({ onAdd, onToast }: Props) {
           maxLength={200}
           value={text}
           onChange={(e) => setText(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleAdd()}
+          onKeyDown={(e) => e.key === "Enter" && e.preventDefault()}
           autoComplete="off"
         />
         <button
